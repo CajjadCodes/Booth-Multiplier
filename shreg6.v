@@ -1,4 +1,4 @@
-module shreg6(clk,rst,init,ld,sh,serin,serout,parin,parout);
+module Shreg6(clk,rst,init,ld,sh,serin,serout,parin,parout);
 input clk;
 input rst;
 input init;
@@ -8,7 +8,7 @@ input serin;
 input [5:0]parin;
 output serout;
 output reg[5:0]parout;
-	always@(posedge clk,posedge rst)begin
+	always@(posedge clk or posedge rst)begin
 		if (rst) parout<=6'b000000;
 		else if (init) parout<=6'b000000;
 		else if (ld) parout<=parin;
