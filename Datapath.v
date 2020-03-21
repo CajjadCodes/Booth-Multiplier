@@ -13,7 +13,7 @@ input ldYminusOne;
 input selR;
 input selL;
 input [5:0]inBus;
-output Y0YminusOne;
+output [1:0]Y0YminusOne;
 output [5:0]outBus;
 	wire [5:0]Xout,Yout,Aout;
 	wire Asign,A0,Y0;
