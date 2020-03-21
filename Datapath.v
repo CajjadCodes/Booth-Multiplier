@@ -20,7 +20,7 @@ output [5:0]outBus;
 	wire YminusOne;
 	wire [5:0]res;
 
-	shreg6 X(
+	Shreg6 X(
 		.clk(clk),
 		.rst(rst),
 		.ld(ldX),
@@ -30,7 +30,7 @@ output [5:0]outBus;
 		.parin(inBus),
 		.parout(Xout)
 		);
-	shreg6 Y(
+	Shreg6 Y(
 		.clk(clk),
 		.rst(rst),
 		.ld(ldY),
@@ -41,7 +41,7 @@ output [5:0]outBus;
 		.parout(Yout)
 		);
 	assign Asign=Aout[5];
-	shreg6 A(
+	Shreg6 A(
 		.clk(clk),
 		.rst(rst),
 		.init(initA),
@@ -52,7 +52,7 @@ output [5:0]outBus;
 		.parin(res),
 		.parout(Aout)
 		);
-	reg1 YminusOneReg(
+	Reg1 YminusOneReg(
 		.clk(clk),
 		.rst(rst),
 		.init(initYminusOne),
@@ -60,18 +60,18 @@ output [5:0]outBus;
 		.in(Y0),
 		.out(YminusOne)
 		);
-	adder adder (
+	Adder adder (
 		.aBarS(aBarS),
 		.A(Aout),
 		.B(Xout),
 		.C(res)
 		);
-	bufif6 buf6L (
+	Bufif6 buf6L (
 		.sel(selL),
 		.in(Aout),
 		.out(outBus)
 		);
-	bufif6 buf6R (
+	Bufif6 buf6R (
 		.sel(selR),
 		.in(Yout),
 		.out(outBus)
