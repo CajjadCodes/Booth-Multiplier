@@ -44,6 +44,7 @@ output [5:0]outBus;
 	shreg6 A(
 		.clk(clk),
 		.rst(rst),
+		.init(initA),
 		.ld(ldA),
 		.sh(shRA),
 		.serin(Asign),
