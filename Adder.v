@@ -1,4 +1,4 @@
-module adder(aBarS,A,B,C);
+module Adder(aBarS,A,B,C);
 input aBarS;
 input [5:0]A;
 input [5:0]B;
