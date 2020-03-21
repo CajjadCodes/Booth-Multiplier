@@ -184,7 +184,7 @@ reg signed [11:0] result;
 		#247 clk = 1;
 		#247 clk = 0;
 		$display("result of %d * %d is: %d", X, Y, result);
-
+		#500
 		$stop;
 	end
 
