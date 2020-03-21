@@ -1,4 +1,4 @@
-module bufif6(sel,in,out);
+module Bufif6(sel,in,out);
 input sel;
 input [5:0]in;
 output [5:0]out;
